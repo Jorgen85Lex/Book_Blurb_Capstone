@@ -40,13 +40,15 @@ Data was collected by querying the Google Books API, retrieving each book's syno
 - Frameowrk: PyTorch and HuggingFace Transformers
 
 ## Performance Metrics
-- Accuracy:  _65.37%_
-- Macro F1:   _0.64_
+- **Accuracy**:  _65.37%_
+- **Macro F1**:   _0.64_
 
 ## Future Improvements
-- Add token attributions (e.g. SHAP)
-- Expand dataset for better generalization/training
-- Implement multi-label predictions
+- **Model Fine-tuning**: Further fine-tune the model with more diverse datasets to improve accuracy.
+- **Token Attribution**: Implement token attribution methods to understand which words influence predictions.
+- **User Feedback Loop**: Implement a feedback mechanism to learn from user guesses and improve predictions.
+- **Multi-label Classification**: Explore multi-label classification to allow for books that fit multiple genres.
+- **Less Preprocessing**: Try using raw text to see if the model performs better without heavy preprocessing.
 
 ## Acknowledgements
 _A huge shout out to Michael and NSS for providing me with the skillset to create this fun app._
