@@ -19,8 +19,8 @@ The genre generator app is a machine learning-powered app that will predict the 
 
 ## Dataset
 Data was collected by querying the Google Books API, retrieving each book's synopsis along with it's associated genre metadata.
-- Source: _Google Books API_
-- Fields collected: 
+- **Source**: _Google Books API_
+- **Fields collected:** 
         - title
         - description
         - genre
@@ -29,15 +29,15 @@ Data was collected by querying the Google Books API, retrieving each book's syno
 - API call for 500 books per genre, consistently stopped early for all genres. Unfortunately was never able to get more books pulled under each genre. 
 
 ## Model Details
-- Model: `DistillBertForSequenceClassification`
-- Tokneizer: `DistilbertTokenizerFast`
-- Dataset: 1131 book blurbs labed by genre
-- Preprocessing:
+- **Model**: `DistillBertForSequenceClassification`
+- **Tokenizer**: `DistilbertTokenizerFast`
+- **Dataset**: 1131 book blurbs labed by genre
+- **Preprocessing**:
         - Lowercasing
         - Punctuation removal
         - Lemmatization using NLTK's `WordNetLemmatizer`
-- Training: 5 epochs
-- Frameowrk: PyTorch and HuggingFace Transformers
+- **Training**: 5 epochs
+- **Frameowrk**: PyTorch and HuggingFace Transformers
 
 ## Performance Metrics
 - **Accuracy**:  _65.37%_
