@@ -56,6 +56,10 @@ if st.session_state.page == "landing":
 
     with st.expander("**👉 Click here to learn more about the model**"):
         st.markdown("""
+        ### 💾 Data Collection
+        Data was collected by querying the Google Books API, retrieving each book's synopsis along with its associated genre metadata.
+        - **Source**: _Google Books API_
+                    
         ### ⚙️ Training Summary
         - **Model**: `DistilBertForSequenceClassification`
         - **Tokenizer**: `DistilBertTokenizerFast`
@@ -164,7 +168,7 @@ Alicia’s refusal to talk, or give any kind of explanation, turns a domestic tr
             })
             st.bar_chart(prob_df.set_index("Genre"))
 
-            with st.expander("** Click to find out what's next **"):
+            with st.expander("**👉 Click here to learn about future improvements**"):
                 st.markdown("""
                 ### Future Improvements
                 - **Model Fine-tuning**: Further fine-tune the model with more diverse datasets to improve accuracy.
