@@ -38,10 +38,10 @@ if "page" not in st.session_state:
 
 if st.session_state.page == "landing":
     st.title("📚 Can You Judge a Book by its Blurb?")
-    st.subheader("A genre prediction app powered by machine learning.🧠")
+    st.subheader("A genre prediction app powered by ML and NLP🧠")
     st.markdown("""
     🎉 Welcome to the **Genre Generator** app! 🎉  
-    Enter a synopsis from a book, and this app predicts its genre using a DistilBERT model fine-tuned on book descriptions.
+    When you enter a synopsis from a book, this app aims to predict its genre using a DistilBERT model fine-tuned on book descriptions.
 
     Supported genres include:
     - 🧙 Fantasy
