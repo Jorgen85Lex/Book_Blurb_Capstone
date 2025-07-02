@@ -66,25 +66,25 @@ if st.session_state.page == "landing":
         - **Preprocessing**: 
             - Lemmatization using NLTK’s `WordNetLemmatizer`
             - Basic text cleanup (lowercasing, punctuation removal)
-        - **Dataset**: 1131 book blurbs labeled by genre
-        - **Training Epochs**: 5
+        - **Dataset**: 1414 book blurbs labeled by genre
+        - **Training Epochs**: 5 passes through the dataset
 
         ---
         ### 📈 Test Set Performance
 
-        - **Test Accuracy**: `65.37%`
-        - **Macro F1 Score**: `0.64`
+        - **Test Accuracy**: `68.9%`
+        - **Macro F1 Score**: `0.68`
 
         | Genre | Precision | Recall | F1-score | Support |
         |-------|-----------|--------|----------|---------|
-        | Fantasy | 0.57 | 0.86 | 0.69 | 14 |
-        | Historical Fiction | 0.52 | 0.57 | 0.54 | 30 |
-        | Horror | 0.57 | 0.63 | 0.60 | 41 |
-        | Mystery | 0.53 | 0.44 | 0.48 | 36 |
-        | Romance | 0.59 | 0.64 | 0.61 | 36 |
-        | Science Fiction | 0.92 | 0.94 | 0.93 | 35 |
-        | Thriller | 0.65 | 0.44 | 0.53 | 45 |
-        | Western | 0.81 | 0.83 | 0.82 | 46 |
+        | Fantasy | 0.76 | 0.66 | 0.70 | 29 |
+        | Historical Fiction | 0.69 | 0.75 | 0.72 | 36 |
+        | Horror | 0.74 | 0.60 | 0.66 | 42 |
+        | Mystery | 0.47| 0.58 | 0.52 | 31 |
+        | Romance | 0.69 | 0.53 | 0.60 | 34 |
+        | Science Fiction | 0.84 | 0.93 | 0.88 | 40 |
+        | Thriller | 0.48 | 0.37 | 0.42 | 30 |
+        | Western | 0.74 | 0.98 | 0.84 | 41 |
 
         ---
         ### 🧾 Confusion Matrix
