@@ -26,8 +26,8 @@ cm_df = pd.DataFrame(cm_data, index=labels, columns=labels)
 
 @st.cache_resource
 def load_model_and_tokenizer():
-    tokenizer = DistilBertTokenizerFast.from_pretrained('notebooks/model_added_trained')
-    model = DistilBertForSequenceClassification.from_pretrained('notebooks/model_added_trained')
+    tokenizer = DistilBertTokenizerFast.from_pretrained('notebooks/model_added_trained', local_files_only=True)
+    model = DistilBertForSequenceClassification.from_pretrained('notebooks/model_added_trained', local_files_only=True, use_safetensors=False)
     model.eval()
     return tokenizer, model
 
