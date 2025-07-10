@@ -5,15 +5,15 @@ from transformers import DistilBertTokenizerFast, DistilBertForSequenceClassific
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-cm_data = [
-    [12, 0, 1, 1, 0, 0, 0, 0],   # Fantasy
-    [2, 17, 2, 1, 6, 1, 0, 1],   # Historical Fiction
-    [1, 3, 26, 3, 1, 0, 3, 4],   # Horror
-    [0, 5, 3, 16, 4, 1, 6, 1],   # Mystery
-    [3, 4, 3, 2, 23, 0, 1, 0],   # Romance
-    [1, 0, 0, 0, 1, 33, 0, 0],   # Science Fiction
-    [0, 3, 9, 7, 2, 1, 20, 3],   # Thriller
-    [2, 1, 2, 0, 2, 0, 1, 38],   # Western
+cm_data_new = [
+    [19,  0,  3,  0,  1,  4,  0,  2],   # Fantasy
+    [2,  27,  0,  2,  3,  1,  1,  0],   # Historical Fiction
+    [1,  0, 25,  6,  1,  1,  2,  6],   # Horror
+    [1,  2,  1, 18,  2,  0,  7,  0],   # Mystery
+    [0,  7,  1,  5, 18,  0,  2,  1],   # Romance
+    [2,  0,  0,  1,  0, 37,  0,  0],   # Science Fiction
+    [0,  2,  4,  6,  1,  1, 11,  5],   # Thriller
+    [0,  1,  0,  0,  0,  0,  0, 40],   # Western
 ]
 
 labels = [
@@ -21,7 +21,7 @@ labels = [
     "Romance", "Science Fiction", "Thriller", "Western"
 ]
 
-cm_df = pd.DataFrame(cm_data, index=labels, columns=labels)
+cm_df_new = pd.DataFrame(cm_data_new, index=labels, columns=labels)
 
 
 @st.cache_resource
@@ -92,7 +92,7 @@ if st.session_state.page == "landing":
         """)
 
         fig, ax = plt.subplots(figsize=(8, 6))
-        sns.heatmap(cm_df, annot=True, fmt="d", cmap="Blues", xticklabels=labels, yticklabels=labels, ax=ax)
+        sns.heatmap(cm_df_new, annot=True, fmt="d", cmap="Blues", xticklabels=labels, yticklabels=labels, ax=ax)
         ax.set_xlabel("Predicted Label")
         ax.set_ylabel("True Label")
         ax.set_title("Confusion Matrix Heatmap")
@@ -184,3 +184,6 @@ Alicia’s refusal to talk, or give any kind of explanation, turns a domestic tr
 
     if st.button("⬅️ Back to Landing Page"):
         st.session_state.page = "landing"
+
+        #ready to go
+        
